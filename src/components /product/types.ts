@@ -1,3 +1,3 @@
 export interface ProductProps {
-  index: number;
+  product: any;
 }

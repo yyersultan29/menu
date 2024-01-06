@@ -1,16 +1,18 @@
-import { Product } from "@/components /Product/Product";
+import { Layout } from "@/layout/layout";
+import ProductList from "@/components /product-list/product-list";
+import Sections from "@/components /sections/sections";
 
 export default function Home() {
+
   return (
-
-    <main className='w-full bg-slate-100 '>
-      <div className="h-5"></div>
-      <div className="flex justify-center items-center flex-col ">
-        {Array(40).fill(0).map((_, index) => (
-          <Product key={index} index={index} />
-        ))}
-      </div>
-
-    </main>
+    <Layout>
+      <>
+        <Sections />
+        <main className='w-full '>
+          <div className="h-5"></div>
+          <ProductList />
+        </main>
+      </>
+    </Layout>
   )
 }
